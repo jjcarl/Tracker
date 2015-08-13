@@ -4,6 +4,8 @@ angular.module('trackerApp.mapDirective', [])
         restrict: 'E',
         scope: {
             points: '=points',
+            mLat: '=mapLat',
+            mLng: '=mapLng'
         },
         link: function(scope, element, attrs) {
 
@@ -21,7 +23,7 @@ angular.module('trackerApp.mapDirective', [])
 
             var mapInfo = {
                 zoom: 12,
-                center: new google.maps.LatLng(40.233671, -111.658673),
+                center: new google.maps.LatLng(scope.mLat, scope.mLng),
                 mapTypeId: google.maps.MapTypeId.SATELLITE
             };
             

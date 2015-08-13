@@ -7,6 +7,8 @@ class Area(models.Model):
     description = models.TextField(null=True, blank=True)
     user = models.ForeignKey(User, related_name='areas')
     date_created = models.DateTimeField(auto_now_add=True)
+    lat = models.FloatField()
+    lng = models.FloatField()
 
     class Meta:
         ordering = ('date_created',)

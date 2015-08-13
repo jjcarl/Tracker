@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 
 
 class PointSerializer(serializers.ModelSerializer):
+
+    id = serializers.IntegerField()
+
     class Meta:
         model = Point
         fields = ('order', 'lat', 'lng', 'id',)
@@ -15,7 +18,7 @@ class AreaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Area
         fields = ('name', 'description',
-                  'points', 'user', 'date_created', 'id',)
+                  'points', 'user', 'date_created', 'id', 'lat', 'lng')
 
     def create(self, validated_data):
         points_data = validated_data.pop('points')
@@ -28,21 +31,23 @@ class AreaSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         points_data = validated_data.pop('points')
-        points = instance.points
+        points = instance.points.all()
 
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description',
                                                   instance.description)
-        instance.user = validated_data.get('user', instance.user)
-        instance.date_created = validated_data.get('date_created',
-                                                   instance.date_created)
+        instance.lat = validated_data.get('lat', instance.lat)
+        instance.lng = validated_data.get('lng', instance.lng)
         instance.save()
 
-        points.lat = validated_data.get('lat', points.username)
-        points.lng = validated_data.get('lng', points.lng)
-        points.order = validated_data.get('order', points.order)
-        points.area = validated_data.get('area', points.area)
-        points.save()
+        for point_data in points_data:
+            point = instance.points.get(id=point_data['id'])
+            point.order = point_data.get('order', point.order)
+            point.lat = point_data.get('lat', point.lat)
+            point.lng = point_data.get('lng', point.lng)
+            point.save()
+
+        return instance
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -52,3 +57,14 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'areas',)
+
+    def create(self, validated_data):
+        user = User.objects.create(**validated_data)
+
+        return user
+
+    def update(self, instance, validated_data):
+        instance.username = validated_data.get('username', instance.username)
+        instance.save()
+
+        return instance

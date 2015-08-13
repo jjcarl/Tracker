@@ -23,8 +23,11 @@
         "order":4
       }
    ],
-   "user": 1
+   "user": 1,
+   "lat":40.233671,
+   "lng":-111.658673
 }
+
 
 {  
    "name":"Large Map in south Orem",
@@ -51,5 +54,67 @@
         "order":4
       }
    ],
-   "user": 1
+   "user": 1,
+   "lat":40.233671,
+   "lng":-111.658673
+}
+
+{  
+   "name":"A new star shaped map around BYU",
+   "description":"This is a big star-shaped map around BYU",
+   "points":[  
+      {  
+         "lat":40.261524,
+         "lng":-111.650824,
+         "order":1
+      },
+      {  
+         "lat":40.257352, 
+         "lng":-111.654372,
+         "order":2
+      },
+       {  
+         "lat":40.257279, 
+         "lng":-111.662236,
+         "order":3
+      },
+      {
+        "lat":40.251497, 
+        "lng":-111.657249,
+        "order":4
+      },
+        {
+        "lat":40.244323, 
+        "lng":-111.661277, 
+        "order":5
+      },
+        {
+        "lat":40.246958, 
+        "lng":-111.651687, 
+        "order":6
+      },
+       {
+        "lat":40.242054, 
+        "lng":-111.638740, 
+        "order":7
+      },
+       {
+        "lat":40.250691, 
+        "lng":-111.643056,
+        "order":8
+      },
+       {
+        "lat":40.257645, 
+        "lng":-111.634232,
+        "order":9
+      },
+       {
+        "lat":40.256766, 
+        "lng":-111.644494, 
+        "order":10
+      }
+   ],
+   "user": 1,
+   "lat":40.250252, 
+   "lng":-111.649002
 }
