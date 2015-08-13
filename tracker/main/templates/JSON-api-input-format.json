@@ -1,0 +1,55 @@
+{  
+   "name":"North Provo",
+   "description":"This is a test map in the area around north Provo",
+   "points":[  
+      {  
+         "lat":40.257190,
+         "lng":-111.665432,
+         "order":1
+      },
+      {  
+         "lat":40.240504,
+         "lng":-111.664056,
+         "order":2
+      },
+       {  
+         "lat":40.250115,
+         "lng":-111.665432,
+         "order":3
+      },
+      {
+        "lat":40.265064,
+        "lng":-111.646361,
+        "order":4
+      }
+   ],
+   "user": 1
+}
+
+{  
+   "name":"Large Map in south Orem",
+   "description":"This is a big box-shaped map in south Orem",
+   "points":[  
+      {  
+         "lat":40.291889,
+         "lng":-111.711038,
+         "order":1
+      },
+      {  
+         "lat":40.289193,
+         "lng":-111.653431,
+         "order":2
+      },
+       {  
+         "lat":40.246586,
+         "lng":-111.648130,
+         "order":3
+      },
+      {
+        "lat":40.244697,
+        "lng":-111.696195,
+        "order":4
+      }
+   ],
+   "user": 1
+}
