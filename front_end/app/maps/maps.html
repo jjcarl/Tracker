@@ -4,18 +4,18 @@
         <div class="col-md-10">
             <ul class="maps">
                 <li ng-repeat="map in maps">
-                    <h2>{{map.name}}</h2>
-                    <p>{{map.description}}</p>
-                    <map class="polygon-map" points="map.points" map-lat="map.lat" map-lng="map.lng">
-                    <!-- <ul ng-repeat="point in map.points">
-                            <li>Point number: {{point.order}}</li>
-                            <li>Latitude: {{point.lat}}</li>
-                            <li>Longitude: {{point.lng}}</li>
-                            <br>
+                    <a href="#/maps/{{map.id}}"><h2>{{map.name}}</h2>
+                        <p>{{map.description}}</p>
+                        <!-- <ul ng-repeat="point in map.points">
+                                <li>Point number: {{point.order}}</li>
+                                <li>Latitude: {{point.lat}}</li>
+                                <li>Longitude: {{point.lng}}</li>
+                                <br>
 
-                            
+                                
 
-                    </ul> -->
+                        </ul> -->
+                    </a>
                 </li>
             </ul>
         </div>
