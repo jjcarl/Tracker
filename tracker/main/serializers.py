@@ -52,7 +52,7 @@ class AreaSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     areas = serializers.PrimaryKeyRelatedField(
-        queryset=Area.objects.all(), many=True)
+        queryset=Area.objects.all(), many=True, required=False)
 
     class Meta:
         model = User

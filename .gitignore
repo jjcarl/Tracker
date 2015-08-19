@@ -1,5 +1,5 @@
 *.pyc
-/migrations/
+migrations/
 *.DS_Store
 local_settings.py
 ogs/*

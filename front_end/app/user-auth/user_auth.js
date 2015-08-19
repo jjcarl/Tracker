@@ -10,7 +10,7 @@ angular.module('trackerApp.userAuth', ['ngRoute'])
     .when('/register', {
         templateUrl: 'user-auth/register.html',
         controller: 'CreateUserController'
-    });
+    })
 }])
 .controller('LoginController', ['$scope', '$location', 'User', function($scope, $location, User) {
     $scope.credentials = {};
@@ -28,8 +28,7 @@ angular.module('trackerApp.userAuth', ['ngRoute'])
             $scope.alerts.splic(index, 1)
     };
 }])
-
-.controller('CreateUserController', ['#scope', '$location', 'User', function($scope, $location, User){
+.controller('CreateUserController', ['$scope', '$location', 'User', function($scope, $location, User){
     $scope.user_info = {}
 
     $scope.register = function(){
@@ -42,6 +41,6 @@ angular.module('trackerApp.userAuth', ['ngRoute'])
     };
     $scope.alerts = [];
     $scope.closeAlert = function(index){
-        $scope.alerts.splic(index, 1)
+        $scope.alerts.splice(index, 1)
     };
 }])

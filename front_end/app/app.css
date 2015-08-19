@@ -4,15 +4,9 @@
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
+  padding: 0 0 0.5 2em;
+  font-size: 1.25em;
+  font-family: helvetica, sans-serif;
 }
 
 .menu > li {

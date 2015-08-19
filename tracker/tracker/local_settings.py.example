@@ -1,3 +1,5 @@
+SECRET_KEY = "askldfasdbalkshgakjsd"
+
 
 DATABASES = {
     'default': {
