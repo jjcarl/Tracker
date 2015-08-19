@@ -28,3 +28,29 @@
   content: "";
   padding: 0;
 }
+
+.polygon-map{
+    display: block;
+    height: 500px;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+.map-list-row {
+  border: solid #eee;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.container {
+  -webkit-box-shadow: inset -1px -1px 33px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: inset -1px -1px 33px 0px rgba(0,0,0,0.08);
+  box-shadow: inset -1px -1px 33px 0px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  background-color: #fcfcfc;
+}
+
+body {
+  background-color: #f7f5f2;
+}

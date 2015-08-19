@@ -1,24 +1,24 @@
-<div class="container-fluid">
-    <h1>This is the map view page!</h1>
+<div class="container">
+    <center><h1>This is the map view page!</h1></center>
     <div class="row">
-        <div class="col-md-10">
-            <ul class="maps">
-                <li ng-repeat="map in maps">
-                    <a href="#/maps/{{map.id}}"><h2>{{map.name}}</h2>
-                        <p>{{map.description}}</p>
-                        <!-- <ul ng-repeat="point in map.points">
-                                <li>Point number: {{point.order}}</li>
-                                <li>Latitude: {{point.lat}}</li>
-                                <li>Longitude: {{point.lng}}</li>
-                                <br>
-
-                                
-
-                        </ul> -->
-                    </a>
-                </li>
-            </ul>
+        <div class="col-md-offset-2 col-md-8">
+            <h2>Please select an item below to view the map</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Map Title</h3>
+                </div>
+                <div class="col-md-6">
+                    <h3>Map Description</h3>
+                </div>
+            </div>
+            <div class="row map-list-row" ng-repeat="map in maps">
+                <div class="col-md-6">
+                    <h4><a href="#/maps/{{map.id}}/">{{map.name}}</a></h4>
+                </div>
+                <div class="col-md-6">
+                    <p><a href="#/maps/{{map.id}}/">{{map.description}}</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-

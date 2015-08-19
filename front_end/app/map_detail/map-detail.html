@@ -1,12 +1,15 @@
-<div>
-    <h2>This is the {{map.name}} map.</h2>
-    <p>
-        <div>
-            <h2>{{map.name}}</h2>
-            <p>{{map.description}}</p>
-            <p>{{map.details}}</p>
-            <map class="polygon-map" points="map.points" map-lat="map.lat" map-lng="map.lng">
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1>{{map.name}}</h1>
+            <p>
+                <div class="row">
+                    <div>
+                        <h4>{{map.description}}</h4>
+                        <map class="polygon-map" points="map.points" map-lat="map.lat" map-lng="map.lng">
+                    </div>
+                </div>
+            </p>
         </div>
-    </p>
+    </div>
 </div>
