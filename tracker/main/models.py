@@ -20,8 +20,11 @@ class Area(models.Model):
     lat = models.FloatField()
     lng = models.FloatField()
 
+    def __unicode__(self):
+        return self.name
+
     class Meta:
-        ordering = ('date_created',)
+        ordering = ('-date_created',)
 
 
 class Point(models.Model):
@@ -29,3 +32,6 @@ class Point(models.Model):
     lat = models.FloatField()
     lng = models.FloatField()
     order = models.IntegerField(null=True, blank=True)
+
+    def __unicode__(self):
+        return "%s" % (self.area)

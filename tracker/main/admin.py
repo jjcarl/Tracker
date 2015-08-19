@@ -1,3 +1,6 @@
 from django.contrib import admin
+from main.models import Area, Point
 
-# Register your models here.
+
+admin.site.register(Area)
+admin.site.register(Point)

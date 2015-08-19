@@ -9,12 +9,13 @@ angular.module('trackerApp.newMap', ['ngRoute'])
     });
 }])
 
-.controller('NewMapController', ['$scope', '$http', function($scope, $http) {
+.controller('NewMapController', ['$scope', '$http', 'User', function($scope, $http, User) {
     $scope.area = []
+    $scope.user = User;
     $scope.submit = function() {
         var name = $scope.name
         var description = $scope.description
-        var user = 1 // TODO - implement auth and get username on send
+        var user = $scope.user.info.id
         var lat = $scope.area[0].lat
         var lng = $scope.area[0].lng
         var points = $scope.area
